@@ -1,0 +1,24 @@
+
+  # string method
+  char str.charAt(index);
+  boolean str.equal(str1)
+  boolean str.equalsIgnoreCase(str1);
+  String[] str.split("//s");
+  string str.contains(str1);
+  String str.subString(startIndex);
+  String str.subString(startIndex,endIndex);
+  String String.join(":","2","4","2023");
+  int str.length();
+  boolean str.isEmpty();
+  boolean str.concat(str1);
+  boolean  str.containsIgnoreCase(str1);
+  String str.replace(old char, new char);
+  String str.replace(old charSequence, new charSequence);
+  strObject.intern()->string object to literal
+  char[] str.toCharArray();
+
+
+  #Array method
+  int[] ar={8,3,5};
+  Arrays.sort(ar)
+  List<Integer> arr= Arrays.asList(new Integer[]{1, 4, 3, 6, 2, 7, 12});

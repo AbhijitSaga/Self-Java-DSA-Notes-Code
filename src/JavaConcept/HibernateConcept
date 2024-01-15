@@ -1,0 +1,40 @@
+
+1.Session ->
+  Session in Hibernate is like a bridge between a Java application and a database.
+  It helps in managing the communication between them. With a Session, you can save, retrieve, update, or
+  delete data in the database using easy-to-use methods like persist(), load(), get(), update(), delete()
+
+2.SessionFactory->
+* SessionFactory provides an instance of Session. It is a factory class that gives the Session objects based on the
+  configuration parameters in order to establish the connection to the database.
+* As a good practice, the application generally has a single instance of SessionFactory.
+* The internal state of a SessionFactory which includes metadata about ORM is immutable,
+  i.e once the instance is created, it cannot be changed.
+
+* This also provides the facility to get information like statistics and metadata related to a class, query executions, etc.
+ It also holds second-level cache data if enabled.
+
+
+ +------------------------+------------------------------------------+------------------------------------------+
+ | Aspect                 | First Level Cache in Session             | Second Level Cache  in SessionFactory   |
+ +------------------------+------------------------------------------+------------------------------------------+
+ | **Scope**              | Local to the Session object              | Maintained at the SessionFactory level,  |
+ |                        |                                          | shared among all sessions                |
+ +------------------------+------------------------------------------+------------------------------------------+
+ | **Sharing**            | Cannot be shared between multiple        | Shared among all sessions in Hibernate   |
+ |                        | sessions                                 |                                          |
+ +------------------------+------------------------------------------+------------------------------------------+
+ | **Enabling/Disabling**| Enabled by default, cannot be disabled   | Disabled by default, can be enabled      |
+ |                        |                                          | through configuration                   |
+ +------------------------+------------------------------------------+------------------------------------------+
+ | **Availability**       | Exists only until the session is open    | Available throughout the application's  |
+ |                        |                                          | lifecycle, destroyed and recreated only |
+ |                        |                                          | during application restart              |
+ +------------------------+------------------------------------------+------------------------------------------+
+ | **Purpose**            | Improves performance for a specific      | Improves performance globally for all    |
+ |                        | session                                  | sessions                                 |
+ +------------------------+------------------------------------------+------------------------------------------+
+ | **Usage**              | Useful for short-lived operations        | Beneficial for long-lived operations,    |
+ |                        | within a session                         | reduces database hits for commonly       |
+ |                        |                                          | accessed data                            |
+ +------------------------+------------------------------------------+------------------------------------------+
