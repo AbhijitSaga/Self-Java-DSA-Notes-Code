@@ -1,29 +1,23 @@
-import java.util.Arrays;
-class Test {
-int a=5;
-  Test(){
-      System.out.println("test");
-  }
-  void m(){
-      System.out.println("m");
-  }
 
-}
-public class Main extends Test {
- Main(){
-     super();
-     super.m();
-     System.out.println(super.a);
-     this.m1();
- }
- void m1(){
+public class Main {
+    public static void main(String[] args)
+    {
+        String s = new String("RR");
+        s = null;
+        Main st = new Main();
 
- }
-    public static void main(String[] args) {
-      Main main=new Main();
-
+        // Requesting JVM to call Garbage Collector method
+        System.gc();
+        System.out.println("Main Completes");
 
     }
+
+    // Here overriding finalize method
+    public void finalize()
+    {
+        System.out.println("finalize method overridden");
+    }
+
 
 }
 

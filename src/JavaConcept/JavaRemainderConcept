@@ -36,3 +36,44 @@ Answer-> A constructor in Java doesn't actually "build" the object, it is used t
 
          If you don't do anything, the default constructor of the parent will be called. However,
          you can use the super keyword to invoke specific constructor on the parent class.
+
+Question 3. this , super, static  keyword
+           this:
+  Answer   ->"this" keyword in Java is used to reference the current object. When used with parentheses,
+              such as "this()," it is typically the first line in a constructor
+           -> allowing you to initialize instance variables "this.a"  and invoke methods "this.method()"of the current object.
+            super:
+           ->"super" keyword in Java is used to reference the parent object. When used with parentheses,
+              such as "super()," it is typically the first line in a constructor
+           -> allowing you to initialize instance variables "super.a"  and invoke methods "super.method()"of the super class object.
+           -> static variable, method, block independent to object they mainly used to memory managemt in side static method
+           only static type variable initialize , call only static type method and calling chain static
+           variable -> static block->static method and static method , variable directly call by class name.
+
+
+ Question 4. final
+Ans-> final variable cannot be changed once initialized ,
+      You must initialize a final variable once and only once. There are three ways to do that for an instance variable:
+
+     1. in the constructor
+     2. in an instance initialization block.
+     3. when you declare it
+    -> final class can not extends(Inherited) and Final classes can be used to achieve immutability, security,
+    performance gains, and design clarity in Java.
+    -> final method can not override.
+    ->final keyword can also be used with variables and methods to restrict their modification.
+
+Question 5. finally, finalize keyword
+       finally-> it always execute even exception occur or not occur after try/catch block , mainly used clean of code ( colse the connectin),
+               There is only one situation where finally block won’t be executed when we are using System.exit(0) method.
+                When we are using System.exit(0) then JVM itself shutdown
+      finalize->It's a protected method inherited from the Object class.
+                It's invoked by the garbage collector before an object is garbage collected.
+                It offers a chance to perform cleanup tasks or release resources before the object's memory is reclaimed.
+
+
+
+
+
+
+
