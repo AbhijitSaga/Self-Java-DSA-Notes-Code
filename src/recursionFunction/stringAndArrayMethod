@@ -19,6 +19,18 @@
 
 
   #Array method
+  1.
   int[] ar={8,3,5};
   Arrays.sort(ar)
   List<Integer> arr= Arrays.asList(new Integer[]{1, 4, 3, 6, 2, 7, 12});
+
+  2.
+  int[] Arr = { 1, 2, 3, 5, 0};
+  int[] tempArr = Arr.clone();
+
+  int[] tempArr1 = new int[Arr.length];
+  System.arraycopy(Arr, 0, tempArr1, 0, Arr.length);
+
+  int[] tempArr2 = Arrays.copyOf(Arr, Arr.length);
+
+  int[] temArr3 = Arrays.copyOfRange(Arr, 0, Arr.length);

@@ -72,6 +72,23 @@ Question 5. finally, finalize keyword
                 It offers a chance to perform cleanup tasks or release resources before the object's memory is reclaimed.
 
 
+ Question 6. private , protected
+ Answer->only outer class can not make private and protected but we can make default , public
+    private-> access all class's member inside the class
+    protected-> access all class's member inside the package and outside the package only  in inheritance case
+    public-> any where access
+    default-> access only inside the package
+
+
+Question 7. Can we modify the throws clause of the superclass method while overriding it in the subclass?
+->If SuperClass does not declare an exception, then the SubClass can only declare unchecked exceptions, but not the checked exceptions.
+->If SuperClass declares an exception, then the SubClass can only declare the same or child exceptions of the exception declared by the
+ SuperClass and any new Runtime Exceptions, just not any new checked exceptions at the same level or higher.
+->If SuperClass declares an exception, then the SubClass can declare without exception.
+
+Question 8. Functional Interfaces
+An interface that contains only one abstract method is known as a functional interface,
+but there is no restriction, you can have n number of default and static methods inside a functional interface.
 
 
 

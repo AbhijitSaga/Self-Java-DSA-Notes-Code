@@ -9,14 +9,13 @@ public class InsertationSort {
         System.out.println(Arrays.toString(arr));
     }
     static void   sort(int[] arr){
-        for(int i=1; i<arr.length;i++){
-
-            while( i>0 && arr[i-1]>arr[i]){
-                int temp =arr[i];
-                arr[i]=arr[i-1];
-                arr[i-1]=temp;
-                i--;
-
+        for(int i=1;i<arr.length;i++){
+            int j=i;
+            while (j>0 && arr[j]<arr[j-1]){
+                int temp=arr[j];
+                arr[j]=arr[j-1];
+                arr[j-1]=temp;
+                j--;
             }
         }
     }
